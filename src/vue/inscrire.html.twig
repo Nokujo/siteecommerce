@@ -1,0 +1,76 @@
+{% extends "base.html.twig" %}
+{% block title %} {{ parent() }}S'inscrire {% endblock %}
+{% block contenu %}
+
+{% if form.valide is defined %}
+{% if form.valide == true %}
+<h1>Inscription réussie</h1>
+<h1>Voici votre identifiant : {{form.email}}</h1>
+{% if form.role == 1 %}
+<h1>Vous êtes administrateur du site</h1>
+{% else %}
+<h1>Vous êtes un client du site </h1>
+{% endif %}
+{% else %}
+<h1>Echec de l'inscription</h1>
+<h1>Erreur : {{form.message}}</h1>
+<h1><a href="index.php?page=inscrire">Retourner sur la page d'inscription</a></h1>
+{% endif %}
+{% else %}
+
+
+<div class="container">
+        <div class="signup-card">
+            <div class="card-header">
+                <div class="icon-circle">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" y1="8" x2="19" y2="14"/><line x1="22" y1="11" x2="16" y2="11"/></svg>
+                </div>
+                <h1>Rejoignez la Velvet Room</h1>
+                <p class="subtitle">Créez votre compte pour accéder à notre collection exclusive de merch Persona</p>
+            </div>
+
+           
+
+                <div class="form-group">
+                    <label for="nuser">Nom d'utilisateur :</label>
+                    <input type="text" id="nuser" name="nuser" placeholder="phantom_thief" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email :</label>
+                    <input type="email" id="email" name="email" placeholder="joker@phantom-thieves.com" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="mdp">Mot de passe :</label>
+                    <input type="password" id="mdp" name="mdp" placeholder="••••••••" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputPassword2" class="sr-only">Mot de passe:</label>
+                    <input type="password" id="inputPassword2" name="inputPassword2" class="form-control" placeholder="Confirmation mot de passe" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="role">Rôle :</label>
+                    <select id="role" name="role" required>
+                        <option value="0">Utilisateur</option>
+                        <option value="1">Administrateur</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="submit-btn">Créer mon compte</button>
+
+                <div class="separator">
+                    <span>ou</span>
+                </div>
+
+                <p class="login-link">
+                    Déjà un compte ? <a href="index.php?page=connexion">Connectez-vous</a>
+                </p>
+            </form>
+        </div>
+    </div>
+
+    {% endif %}
+{% endblock %}

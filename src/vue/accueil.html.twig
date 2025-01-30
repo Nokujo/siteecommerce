@@ -1,0 +1,181 @@
+{% extends "base.html.twig" %}
+{% block title %} {{ parent() }} Accueil {% endblock %}
+{% block contenu %} 
+
+<body class="light-theme">
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="banneraccueil.jpg" alt="Logo" class="logo">
+                <span>Persona WORLD</span>
+            </div>
+            <div class="nav-links">
+                <a href="index.php?page=accueil" class="active">Accueil</a>
+                <a href="#products">Boutique</a>
+                <a href="index.php?page=connexion">Connexion</a>
+                <a href="index.php?page=inscrire">Inscription</a>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <div class="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Bienvenue sur Persona WORLD</h1>
+            <p>Découvrez notre collection exclusive de produits dérivés Persona</p>
+            <a href="#products" class="cta-button">Explorer la boutique</a>
+        </div>
+    </header>
+
+    <section class="categories">
+        <div class="container">
+            <h2>Catégories</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="img/bannerfigure.jpg" alt="Figurines">
+                    <h3>Figurines</h3>
+                </div>
+                <div class="category-card">
+                    <img src="img/bannervetement.png" alt="Vêtements">
+                    <h3>Vêtements</h3>
+                </div>
+                <div class="category-card">
+                    <img src="img/banneraccessoire.jpg" alt="Autre produit dérivés">
+                    <h3>Autre produit dérivés</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="products" class="products">
+        <div class="container">
+            <h2>Produits Populaires</h2>
+            <div class="product-grid">
+                <!-- Produit 1 -->
+                <div class="product-card">
+                    <div class="product-badge">Nouveau</div>
+                    <img src="img/joker figure.jpg" alt="Joker Figure">
+                    <div class="product-info">
+                        <h3>Joker Figurine - Persona 5</h3>
+                        <p class="price">45.99 €</p>
+                        <div class="product-actions">
+                            <button class="add-to-cart">Ajouter au panier</button>
+                            <button class="wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Répéter pour les autres produits -->
+                <div class="product-card">
+                    <div class="product-badge">Nouveau</div>
+                    <img src="img/joker figure.jpg" alt="Joker Figure">
+                    <div class="product-info">
+                        <h3>Joker Figurine - Persona 5</h3>
+                        <p class="price">45.99 €</p>
+                        <div class="product-actions">
+                            <button class="add-to-cart">Ajouter au panier</button>
+                            <button class="wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">Nouveau</div>
+                    <img src="img/joker figure.jpg" alt="Joker Figure">
+                    <div class="product-info">
+                        <h3>Joker Figurine - Persona 5</h3>
+                        <p class="price">45.99 €</p>
+                        <div class="product-actions">
+                            <button class="add-to-cart">Ajouter au panier</button>
+                            <button class="wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-badge">Nouveau</div>
+                    <img src="img/joker figure.jpg" alt="Joker Figure">
+                    <div class="product-info">
+                        <h3>Joker Figurine - Persona 5</h3>
+                        <p class="price">45.99 €</p>
+                        <div class="product-actions">
+                            <button class="add-to-cart">Ajouter au panier</button>
+                            <button class="wishlist"><i class="fas fa-heart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter">
+        <div class="container">
+            <h2>Restez informé</h2>
+            <p>Inscrivez-vous à notre newsletter pour recevoir les dernières nouveautés</p>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Votre email">
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-section">
+                    <h3>À propos</h3>
+                    <p>Persona WORLD est votre destination unique pour tous les produits dérivés officiels de la série Persona.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Liens rapides</h3>
+                    <ul>
+                        <li><a href="#">Nouveautés</a></li>
+                        <li><a href="#">Meilleures ventes</a></li>
+                        <li><a href="#">Promotions</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <ul>
+                        <li><i class="fas fa-envelope"></i> contact@personaworld.com</li>
+                        <li><i class="fas fa-phone"></i> +33 1 23 45 67 89</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Suivez-nous</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-discord"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Persona WORLD. Tous droits réservés.</p>
+                <div class="footer-links">
+                    <a href="#">Mentions légales</a>
+                    <a href="#">CGV</a>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Theme Toggle
+        const themeToggle = document.getElementById('themeToggle');
+        const body = document.body;
+        
+        themeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-theme');
+            const icon = themeToggle.querySelector('i');
+            icon.classList.toggle('fa-moon');
+            icon.classList.toggle('fa-sun');
+        });
+    </script>
+</body>
+{% endblock %}
